@@ -16,7 +16,14 @@ async function getWeather(event) {
 
         //Log the results to the console
         console.log(weatherData);
-        } 
+        console.log(`Max temp: ${weatherData.main.temp_max}`);
+        console.log(`Min temp: ${weatherData.main.temp_min}`);
+        console.log(`Current temp: ${weatherData.main.temp}`);
+        console.log(`Feels like: ${weatherData.main.feels_like}`);
+        console.log(`Humidity: ${weatherData.main.humidity}`);
+        console.log(`Weather: ${weatherData.weather[0].description}`);
+        console.log(`Wind speed: ${weatherData.wind.speed}`);
+    } 
         
     catch (error){
         console.error(error);
