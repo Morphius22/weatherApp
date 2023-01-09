@@ -1,5 +1,6 @@
 [X] It should be able to find weather for a given location
 [X] It should be able to accept a weather location
-[] It should be able to display the current weather
+[X] It should be able to display the current weather
 [] It should be able to display the future weather
 [] It should allow you to change weather locations
+[] Nice UI (optional)
