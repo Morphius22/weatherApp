@@ -15,11 +15,8 @@ async function getWeather() {
 }
 
 
-let submitBtn = document.querySelector('.option');
+let submitBtn = document.getElementById('submitButton');
 console.log(submitBtn);
 
 submitBtn.addEventListener('click', getWeather);
-
-
-// getWeather(document.getElementById("city").value);
 
