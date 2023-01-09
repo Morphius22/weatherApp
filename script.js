@@ -1,15 +1,25 @@
-async function getWeather(location) {
+async function getWeather() {
     try {
+        let location = document.getElementById("city").value;
+        console.log(location);
         let weatherLocation = String(location);
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${weatherLocation}&APPID=9fd2540735d4b8bf8b1d4439bfac44ef`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${weatherLocation}&APPID=9fd2540735d4b8bf8b1d4439bfac44ef&units=imperial`;
         let response = await fetch(url);
         let weatherData = await response.json();
-        console.log(`this is the weather Location: ${weatherLocation}`);
-        console.log(`this is the URL: ${url}`);
-        await console.log(`this is the weatherData: ${weatherData}`);
-    } catch (error){
+        console.log(weatherData);
+        } 
+        
+    catch (error){
         console.error(error);
-    }
+        }
 }
 
-getWeather('London');
+
+let submitBtn = document.querySelector('.option');
+console.log(submitBtn);
+
+submitBtn.addEventListener('click', getWeather);
+
+
+// getWeather(document.getElementById("city").value);
+
